@@ -65,3 +65,37 @@
 //     }
 
 
+// Написать конвертор валют. Пользователь вводит количество USD, выбирает, 
+// в какую валюту хочет перевести EUR, UAN или AZN, и получает в ответ соответствующую сумму.
+let cash =  prompt("Введіть суму");
+let cashType = prompt("Введіть валюту на яку обмінюємо: EUR UAN AZN");
+    cashType = cashType.toUpperCase(); 
+let yourCash;
+
+function convertEUR() {
+    yourCash = cash * 1.13;
+} 
+function convertUAN() {
+    yourCash = cash * 2.13;
+} 
+function convertAZN() {
+    yourCash = cash * 5.13;
+} 
+
+
+if (cashType == "EUR" || cashType == "UAN" || cashType == "AZN") {
+
+  if (cashType == "EUR") {
+      console.log(convertEUR(yourCash));
+  } else if (cashType == "UAN") {
+    console.log(convertUAN());
+      
+  } else {
+    console.log(convertAZN());
+
+  }
+
+} else {
+    console.log("Не вірно введена валюта");
+
+}
